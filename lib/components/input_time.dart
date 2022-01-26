@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:pomodoro/stores/pomodoro_store.dart';
+import 'package:provider/provider.dart';
 
 class InputTime extends StatelessWidget {
   final int value;
   final String title;
-  final VoidCallback increment;
-  final VoidCallback decrement;
+  final VoidCallback? increment;
+  final VoidCallback? decrement;
 
   const InputTime({
     Key? key,
     required this.value,
     required this.title,
-    required this.increment,
-    required this.decrement,
+    this.increment,
+    this.decrement,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final PomodoroStore store = Provider.of<PomodoroStore>(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -36,7 +39,7 @@ class InputTime extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 shape: const CircleBorder(),
                 padding: const EdgeInsets.all(15),
-                primary: Colors.red,
+                primary: store.isWorking() ? Colors.red : Colors.green[700],
               ),
             ),
             Text(
@@ -52,7 +55,7 @@ class InputTime extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 shape: const CircleBorder(),
                 padding: const EdgeInsets.all(15),
-                primary: Colors.red,
+                primary: store.isWorking() ? Colors.red : Colors.green[700],
               ),
             ),
           ],

@@ -39,6 +39,66 @@ mixin _$PomodoroStore on _PomodoroStoreBase, Store {
     });
   }
 
+  final _$minutesAtom = Atom(name: '_PomodoroStoreBase.minutes');
+
+  @override
+  int get minutes {
+    _$minutesAtom.reportRead();
+    return super.minutes;
+  }
+
+  @override
+  set minutes(int value) {
+    _$minutesAtom.reportWrite(value, super.minutes, () {
+      super.minutes = value;
+    });
+  }
+
+  final _$secondsAtom = Atom(name: '_PomodoroStoreBase.seconds');
+
+  @override
+  int get seconds {
+    _$secondsAtom.reportRead();
+    return super.seconds;
+  }
+
+  @override
+  set seconds(int value) {
+    _$secondsAtom.reportWrite(value, super.seconds, () {
+      super.seconds = value;
+    });
+  }
+
+  final _$initiatedAtom = Atom(name: '_PomodoroStoreBase.initiated');
+
+  @override
+  bool get initiated {
+    _$initiatedAtom.reportRead();
+    return super.initiated;
+  }
+
+  @override
+  set initiated(bool value) {
+    _$initiatedAtom.reportWrite(value, super.initiated, () {
+      super.initiated = value;
+    });
+  }
+
+  final _$typeIntervalAtom = Atom(name: '_PomodoroStoreBase.typeInterval');
+
+  @override
+  TypeInterval get typeInterval {
+    _$typeIntervalAtom.reportRead();
+    return super.typeInterval;
+  }
+
+  @override
+  set typeInterval(TypeInterval value) {
+    _$typeIntervalAtom.reportWrite(value, super.typeInterval, () {
+      super.typeInterval = value;
+    });
+  }
+
   final _$_PomodoroStoreBaseActionController =
       ActionController(name: '_PomodoroStoreBase');
 
@@ -87,10 +147,47 @@ mixin _$PomodoroStore on _PomodoroStoreBase, Store {
   }
 
   @override
+  void initiate() {
+    final _$actionInfo = _$_PomodoroStoreBaseActionController.startAction(
+        name: '_PomodoroStoreBase.initiate');
+    try {
+      return super.initiate();
+    } finally {
+      _$_PomodoroStoreBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void stop() {
+    final _$actionInfo = _$_PomodoroStoreBaseActionController.startAction(
+        name: '_PomodoroStoreBase.stop');
+    try {
+      return super.stop();
+    } finally {
+      _$_PomodoroStoreBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void refresh() {
+    final _$actionInfo = _$_PomodoroStoreBaseActionController.startAction(
+        name: '_PomodoroStoreBase.refresh');
+    try {
+      return super.refresh();
+    } finally {
+      _$_PomodoroStoreBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 timeWork: ${timeWork},
-timeRest: ${timeRest}
+timeRest: ${timeRest},
+minutes: ${minutes},
+seconds: ${seconds},
+initiated: ${initiated},
+typeInterval: ${typeInterval}
     ''';
   }
 }

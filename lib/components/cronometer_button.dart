@@ -3,9 +3,14 @@ import 'package:flutter/material.dart';
 class CronometerButton extends StatelessWidget {
   final String text;
   final IconData icon;
+  final VoidCallback? onPressed;
 
-  const CronometerButton({Key? key, required this.text, required this.icon})
-      : super(key: key);
+  const CronometerButton({
+    Key? key,
+    required this.text,
+    required this.icon,
+    this.onPressed,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +25,7 @@ class CronometerButton extends StatelessWidget {
           fontSize: 25,
         ),
       ),
-      onPressed: () {},
+      onPressed: onPressed,
       child: Row(
         children: [
           Padding(
