@@ -1,16 +1,27 @@
-# pomodoro
+# Pomodoro
 
-A new Flutter project.
+### Screenshot
 
-## Getting Started
+![Work time](./print1.png)
+![Alert](./print2.png)
+![Rest time](./print3.png)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### Links
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Live Site URL: [https://hansmboron.github.io/pomodoro/](https://hansmboron.github.io/pomodoro/)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## My process
+
+### Built with
+
+- Flutter
+- Mobx
+- Provider
+
+## Author
+
+- Website - [Hans M Boron](https://www.mehsys.com.br)
+- GitHub - [@hansmboron](https://www.github.com/hansmboron)
+- YouTube - [@HansMBoron](https://www.youtube.com/c/HansMBoron)
+- LinkedIn - [@hansmateusboron](https://www.linkedin.com/in/hansmateusboron/)
