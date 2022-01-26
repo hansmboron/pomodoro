@@ -28,7 +28,8 @@ class Pomodoro extends StatelessWidget {
                     increment: store.initiated && store.isWorking()
                         ? null
                         : store.incrementWorkTime,
-                    decrement: store.initiated && store.isWorking()
+                    decrement: store.initiated && store.isWorking() ||
+                            store.timeWork <= 1
                         ? null
                         : store.decrementWorkTime,
                   ),
@@ -38,7 +39,8 @@ class Pomodoro extends StatelessWidget {
                     increment: store.initiated && store.isResting()
                         ? null
                         : store.incrementRestTime,
-                    decrement: store.initiated && store.isResting()
+                    decrement: store.initiated && store.isResting() ||
+                            store.timeRest <= 1
                         ? null
                         : store.decrementRestTime,
                   ),

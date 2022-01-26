@@ -103,6 +103,39 @@ mixin _$PomodoroStore on _PomodoroStoreBase, Store {
       ActionController(name: '_PomodoroStoreBase');
 
   @override
+  void initiate(BuildContext context) {
+    final _$actionInfo = _$_PomodoroStoreBaseActionController.startAction(
+        name: '_PomodoroStoreBase.initiate');
+    try {
+      return super.initiate(context);
+    } finally {
+      _$_PomodoroStoreBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void stop() {
+    final _$actionInfo = _$_PomodoroStoreBaseActionController.startAction(
+        name: '_PomodoroStoreBase.stop');
+    try {
+      return super.stop();
+    } finally {
+      _$_PomodoroStoreBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void refresh() {
+    final _$actionInfo = _$_PomodoroStoreBaseActionController.startAction(
+        name: '_PomodoroStoreBase.refresh');
+    try {
+      return super.refresh();
+    } finally {
+      _$_PomodoroStoreBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   void incrementWorkTime() {
     final _$actionInfo = _$_PomodoroStoreBaseActionController.startAction(
         name: '_PomodoroStoreBase.incrementWorkTime');
@@ -141,39 +174,6 @@ mixin _$PomodoroStore on _PomodoroStoreBase, Store {
         name: '_PomodoroStoreBase.decrementRestTime');
     try {
       return super.decrementRestTime();
-    } finally {
-      _$_PomodoroStoreBaseActionController.endAction(_$actionInfo);
-    }
-  }
-
-  @override
-  void initiate() {
-    final _$actionInfo = _$_PomodoroStoreBaseActionController.startAction(
-        name: '_PomodoroStoreBase.initiate');
-    try {
-      return super.initiate();
-    } finally {
-      _$_PomodoroStoreBaseActionController.endAction(_$actionInfo);
-    }
-  }
-
-  @override
-  void stop() {
-    final _$actionInfo = _$_PomodoroStoreBaseActionController.startAction(
-        name: '_PomodoroStoreBase.stop');
-    try {
-      return super.stop();
-    } finally {
-      _$_PomodoroStoreBaseActionController.endAction(_$actionInfo);
-    }
-  }
-
-  @override
-  void refresh() {
-    final _$actionInfo = _$_PomodoroStoreBaseActionController.startAction(
-        name: '_PomodoroStoreBase.refresh');
-    try {
-      return super.refresh();
     } finally {
       _$_PomodoroStoreBaseActionController.endAction(_$actionInfo);
     }

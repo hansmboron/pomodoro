@@ -43,7 +43,9 @@ class Cronometer extends StatelessWidget {
                     child: CronometerButton(
                         text: 'Iniciar',
                         icon: Icons.play_arrow,
-                        onPressed: store.initiate),
+                        onPressed: () {
+                          store.initiate(context);
+                        }),
                   ),
                 if (store.initiated)
                   Padding(
